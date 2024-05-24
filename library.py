@@ -6,35 +6,22 @@ import matplotlib.pyplot as plt
 frequency = 1
 
 sinus = clib.generate_wave('sine', frequency)
-# clib.plot_line(generated_wave.time, generated_wave.wave)
-plt.plot(sinus.time, sinus.wave)
+clib.plot_line(sinus.time, sinus.wave)
 
 cosinus = clib.generate_wave('cosine', frequency)
-# clib.plot_line(generated_wave.time, generated_wave.wave)
-plt.plot(cosinus.time, cosinus.wave)
+clib.plot_line(cosinus.time, cosinus.wave)
 
 square = clib.generate_wave('square', frequency)
-# clib.plot_line(generated_wave.time, generated_wave.wave)
-plt.plot(square.time, square.wave)
+clib.plot_line(square.time, square.wave)
 
 sawtooth = clib.generate_wave('sawtooth', frequency)
-# clib.plot_line(generated_wave.time, generated_wave.wave)
-plt.plot(sawtooth.time, sawtooth.wave)
-
-plt.savefig("outputs\\generated-waves.jpg")
-plt.clf()
+clib.plot_line(sawtooth.time, sawtooth.wave)
 
 audio = clib.read_audio("inputs\\test-audio.wav")
-# clib.plot_line(audio.time, audio.wave)
-plt.plot(audio.time, audio.wave)
-plt.savefig("outputs\\test-audio.jpg")
-plt.clf()
+clib.plot_line(audio.time, audio.wave)
 
 filtered_audio = clib.lowpass_filter(audio, 100)
-# clib.plot_line(filtered_audio.time, filtered_audio.wave)
-plt.plot(filtered_audio.time, filtered_audio.wave)
-plt.savefig("outputs\\test-audio-filtered.jpg")
-plt.clf()
+clib.plot_line(filtered_audio.time, filtered_audio.wave)
 
 input_image = im.imread("inputs\\test-image.jpg")
 plt.imshow(input_image)
