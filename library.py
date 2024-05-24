@@ -25,15 +25,12 @@ clib.plot_line(filtered_audio.time, filtered_audio.wave)
 
 input_image = im.imread("inputs\\test-image.jpg")
 plt.imshow(input_image)
-plt.savefig("outputs\\test-image.jpg")
 plt.show()
 
 gaussian_filtered_image = clib.gaussian_filter(input_image, 3)
 plt.imshow(gaussian_filtered_image)
-plt.savefig("outputs\\test-image-gaussian.jpg")
 plt.show()
 
 grayscale_image = clib.grayscale(input_image)
 plt.imshow(grayscale_image, cmap='gray')
-plt.savefig("outputs\\test-image-grayscale.jpg")
 plt.show()
